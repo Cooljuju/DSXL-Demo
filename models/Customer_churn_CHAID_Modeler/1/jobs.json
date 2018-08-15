@@ -1,0 +1,23 @@
+[
+  {
+    "args": [],
+    "author": "999",
+    "dateCreated": 1534303343,
+    "displayName": "CustomerchurnCHAIDModeler-1534303321077",
+    "env": [
+      "SPARK_VERSION=2.1"
+    ],
+    "fileName": "CustomerchurnCHAIDModeler-model-evaluation-1534303321076.py",
+    "jobId": "2d452efa4f1862a2",
+    "jobName": "customerchurnchaidmodeler-1534303321077",
+    "mainScript": [
+      "/opt/conda/bin/python",
+      "scripts/CustomerchurnCHAIDModeler-model-evaluation-1534303321076.py"
+    ],
+    "remoteOptions": [],
+    "runtimeEnvironment": "dsx-scripted-ml-python3",
+    "scheduleDescription": "On demand",
+    "targetHost": "",
+    "type": "Model evaluation"
+  }
+]

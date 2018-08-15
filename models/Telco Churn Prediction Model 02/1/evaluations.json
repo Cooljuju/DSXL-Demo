@@ -1,0 +1,34 @@
+[
+    {
+        "metrics": {
+            "accuracyScore": 0.8625363020329139, 
+            "areaUnderPR": 0.8319681569670929, 
+            "areaUnderROC": 0.8215972239073988, 
+            "threshold": {
+                "metric": "accuracyScore", 
+                "mid_value": 0.7, 
+                "min_value": 0.3
+            }
+        }, 
+        "modelName": "Telco Churn Prediction Model 02", 
+        "modelVersion": "1", 
+        "performance": "good", 
+        "startTime": 1534300779
+    }, 
+    {
+        "metrics": {
+            "accuracyScore": 0.8545006165228114, 
+            "areaUnderPR": 0.8236096362494233, 
+            "areaUnderROC": 0.8160454103166781, 
+            "threshold": {
+                "metric": "accuracyScore", 
+                "mid_value": 0.7, 
+                "min_value": 0.3
+            }
+        }, 
+        "modelName": "Telco Churn Prediction Model 02", 
+        "modelVersion": "1", 
+        "performance": "good", 
+        "startTime": 1534301108
+    }
+]

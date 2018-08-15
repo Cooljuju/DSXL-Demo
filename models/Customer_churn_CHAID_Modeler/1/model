@@ -1,0 +1,1306 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<PMML version="4.3" xmlns="http://www.dmg.org/PMML-4_3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.dmg.org/PMML-4_3 pmml-4-3.xsd">
+  <Header copyright="Copyright(c) IBM Corp. 1989-2015. All rights reserved.">
+    <Application name="IBM SPSS Modeler Server" version="1.0.0"/>
+    <Timestamp/>
+</Header>
+  <DataDictionary numberOfFields="17">
+    <DataField dataType="double" displayName="ID" isCyclic="0" name="ID" optype="continuous"/>
+    <DataField dataType="string" displayName="Gender" isCyclic="0" name="Gender" optype="categorical">
+      <Value displayValue="F" property="valid" value="F"/>
+      <Value displayValue="M" property="valid" value="M"/>
+</DataField>
+    <DataField dataType="string" displayName="Status" isCyclic="0" name="Status" optype="categorical">
+      <Value displayValue="D" property="valid" value="D"/>
+      <Value displayValue="M" property="valid" value="M"/>
+      <Value displayValue="S" property="valid" value="S"/>
+</DataField>
+    <DataField dataType="double" displayName="Children" isCyclic="0" name="Children" optype="continuous"/>
+    <DataField dataType="double" displayName="Est Income" isCyclic="0" name="Est Income" optype="continuous"/>
+    <DataField dataType="string" displayName="Car Owner" isCyclic="0" name="Car Owner" optype="categorical">
+      <Value displayValue="N" property="valid" value="N"/>
+      <Value displayValue="Y" property="valid" value="Y"/>
+</DataField>
+    <DataField dataType="double" displayName="Age" isCyclic="0" name="Age" optype="continuous"/>
+    <DataField dataType="double" displayName="LongDistance" isCyclic="0" name="LongDistance" optype="continuous"/>
+    <DataField dataType="double" displayName="International" isCyclic="0" name="International" optype="continuous"/>
+    <DataField dataType="double" displayName="Local" isCyclic="0" name="Local" optype="continuous"/>
+    <DataField dataType="double" displayName="Dropped" isCyclic="0" name="Dropped" optype="continuous"/>
+    <DataField dataType="string" displayName="Paymethod" isCyclic="0" name="Paymethod" optype="categorical">
+      <Value displayValue="Auto" property="valid" value="Auto"/>
+      <Value displayValue="CC" property="valid" value="CC"/>
+      <Value displayValue="CH" property="valid" value="CH"/>
+</DataField>
+    <DataField dataType="string" displayName="LocalBilltype" isCyclic="0" name="LocalBilltype" optype="categorical">
+      <Value displayValue="Budget" property="valid" value="Budget"/>
+      <Value displayValue="FreeLocal" property="valid" value="FreeLocal"/>
+</DataField>
+    <DataField dataType="string" displayName="LongDistanceBilltype" isCyclic="0" name="LongDistanceBilltype" optype="categorical">
+      <Value displayValue="Intnl_discount" property="valid" value="Intnl_discount"/>
+      <Value displayValue="Standard" property="valid" value="Standard"/>
+</DataField>
+    <DataField dataType="double" displayName="Usage" isCyclic="0" name="Usage" optype="continuous"/>
+    <DataField dataType="double" displayName="RatePlan" isCyclic="0" name="RatePlan" optype="continuous"/>
+    <DataField dataType="string" displayName="CHURN" isCyclic="0" name="CHURN" optype="categorical">
+      <Value displayValue="F" property="valid" value="F"/>
+      <Value displayValue="T" property="valid" value="T"/>
+</DataField>
+</DataDictionary>
+  <TreeModel algorithmName="CHAID" functionName="classification">
+    <Extension extender="spss.com">
+      <X-risk value="0.117325227963526"/>
+      <X-seOfRisk value="0.00793438206490423"/>
+</Extension>
+    <MiningSchema>
+      <MiningField importance="0.0298203" name="Status" usageType="active"/>
+      <MiningField importance="0.298982" name="Children" usageType="active"/>
+      <MiningField importance="0.0409562" name="Paymethod" usageType="active"/>
+      <MiningField importance="0.137935" name="Est Income" usageType="active"/>
+      <MiningField importance="0.126429" name="LongDistanceBilltype" usageType="active"/>
+      <MiningField importance="0.0168023" name="LocalBilltype" usageType="active"/>
+      <MiningField importance="0.0497944" name="LongDistance" usageType="active"/>
+      <MiningField importance="0.0130891" name="RatePlan" usageType="active"/>
+      <MiningField importance="0.158345" name="Usage" usageType="active"/>
+      <MiningField importance="0.0552562" name="Age" usageType="active"/>
+      <MiningField importance="0.0188439" name="Car Owner" usageType="active"/>
+      <MiningField importance="0.0379555" name="Gender" usageType="active"/>
+      <MiningField importance="0.0157918" name="International" usageType="active"/>
+      <MiningField name="CHURN" usageType="predicted"/>
+</MiningSchema>
+    <ModelStats>
+      <UnivariateStats field="Status">
+        <Counts invalidFreq="0" missingFreq="0" totalFreq="1645"/>
+</UnivariateStats>
+      <UnivariateStats field="Children">
+        <Counts invalidFreq="0" missingFreq="0" totalFreq="1645"/>
+        <NumericInfo maximum="2" minimum="0"/>
+</UnivariateStats>
+      <UnivariateStats field="Paymethod">
+        <Counts invalidFreq="0" missingFreq="0" totalFreq="1645"/>
+</UnivariateStats>
+      <UnivariateStats field="Est Income">
+        <Counts invalidFreq="0" missingFreq="0" totalFreq="1645"/>
+        <NumericInfo maximum="9" minimum="0"/>
+</UnivariateStats>
+      <UnivariateStats field="LongDistanceBilltype">
+        <Counts invalidFreq="0" missingFreq="0" totalFreq="1645"/>
+</UnivariateStats>
+      <UnivariateStats field="LocalBilltype">
+        <Counts invalidFreq="0" missingFreq="0" totalFreq="1645"/>
+</UnivariateStats>
+      <UnivariateStats field="LongDistance">
+        <Counts invalidFreq="0" missingFreq="0" totalFreq="1645"/>
+        <NumericInfo maximum="9" minimum="0"/>
+</UnivariateStats>
+      <UnivariateStats field="RatePlan">
+        <Counts invalidFreq="0" missingFreq="0" totalFreq="1645"/>
+        <NumericInfo maximum="3" minimum="0"/>
+</UnivariateStats>
+      <UnivariateStats field="Usage">
+        <Counts invalidFreq="0" missingFreq="0" totalFreq="1645"/>
+        <NumericInfo maximum="9" minimum="0"/>
+</UnivariateStats>
+      <UnivariateStats field="Age">
+        <Counts invalidFreq="0" missingFreq="0" totalFreq="1645"/>
+        <NumericInfo maximum="9" minimum="0"/>
+</UnivariateStats>
+      <UnivariateStats field="Car Owner">
+        <Counts invalidFreq="0" missingFreq="0" totalFreq="1645"/>
+</UnivariateStats>
+      <UnivariateStats field="Gender">
+        <Counts invalidFreq="0" missingFreq="0" totalFreq="1645"/>
+</UnivariateStats>
+      <UnivariateStats field="International">
+        <Counts invalidFreq="0" missingFreq="0" totalFreq="1645"/>
+        <NumericInfo maximum="3" minimum="0"/>
+</UnivariateStats>
+</ModelStats>
+    <Node defaultChild="1" id="0" recordCount="1645" score="F">
+      <Extension>
+        <X-Node>
+          <X-NodeStats adjPValue="5.20330746193345e-53" chiSquare="237.044474950664" df1="1"/>
+</X-Node>
+</Extension>
+      <True/>
+      <ScoreDistribution confidence="0.594528875379939" probability="0.594528875379939" recordCount="978" value="F">
+        <Extension extender="spss.com" name="probability" value="0.594528875379939"/>
+</ScoreDistribution>
+      <ScoreDistribution confidence="0.405471124620061" probability="0.405471124620061" recordCount="667" value="T">
+        <Extension extender="spss.com" name="probability" value="0.405471124620061"/>
+</ScoreDistribution>
+      <Node defaultChild="4" id="1" recordCount="987" score="F">
+        <Extension>
+          <X-Node>
+            <X-NodeStats adjPValue="2.12776629097701e-43" chiSquare="192.178186201012" df1="1"/>
+</X-Node>
+</Extension>
+        <CompoundPredicate booleanOperator="surrogate">
+          <CompoundPredicate booleanOperator="or">
+            <SimplePredicate field="Status" operator="equal" value="D"/>
+            <SimplePredicate field="Status" operator="equal" value="M"/>
+</CompoundPredicate>
+          <True/>
+</CompoundPredicate>
+        <ScoreDistribution confidence="0.746707193515704" probability="0.746707193515704" recordCount="737" value="F">
+          <Extension extender="spss.com" name="probability" value="0.746707193515704"/>
+</ScoreDistribution>
+        <ScoreDistribution confidence="0.253292806484296" probability="0.253292806484296" recordCount="250" value="T">
+          <Extension extender="spss.com" name="probability" value="0.253292806484296"/>
+</ScoreDistribution>
+        <Node defaultChild="11" id="3" recordCount="460" score="F">
+          <Extension>
+            <X-Node>
+              <X-NodeStats adjPValue="3.17559943640881e-15" chiSquare="66.7665599630348" df1="2"/>
+</X-Node>
+</Extension>
+          <CompoundPredicate booleanOperator="surrogate">
+            <CompoundPredicate booleanOperator="and">
+              <True/>
+              <SimplePredicate field="Children" operator="lessOrEqual" value="1"/>
+</CompoundPredicate>
+            <False/>
+</CompoundPredicate>
+          <ScoreDistribution confidence="0.541304347826087" probability="0.541304347826087" recordCount="249" value="F">
+            <Extension extender="spss.com" name="probability" value="0.541304347826087"/>
+</ScoreDistribution>
+          <ScoreDistribution confidence="0.458695652173913" probability="0.458695652173913" recordCount="211" value="T">
+            <Extension extender="spss.com" name="probability" value="0.458695652173913"/>
+</ScoreDistribution>
+          <Node defaultChild="33" id="10" recordCount="80" score="F">
+            <Extension>
+              <X-Node>
+                <X-NodeStats adjPValue="0.000547882958241489" chiSquare="16.075205640423" df1="1"/>
+</X-Node>
+</Extension>
+            <CompoundPredicate booleanOperator="surrogate">
+              <CompoundPredicate booleanOperator="or">
+                <SimplePredicate field="Paymethod" operator="equal" value="Auto"/>
+                <False/>
+</CompoundPredicate>
+              <False/>
+</CompoundPredicate>
+            <ScoreDistribution confidence="0.925" probability="0.925" recordCount="74" value="F">
+              <Extension extender="spss.com" name="probability" value="0.925"/>
+</ScoreDistribution>
+            <ScoreDistribution confidence="0.075" probability="0.075" recordCount="6" value="T">
+              <Extension extender="spss.com" name="probability" value="0.075"/>
+</ScoreDistribution>
+            <Node id="32" recordCount="23" score="F">
+              <CompoundPredicate booleanOperator="surrogate">
+                <CompoundPredicate booleanOperator="and">
+                  <True/>
+                  <SimplePredicate field="Est Income" operator="lessOrEqual" value="42000"/>
+</CompoundPredicate>
+                <False/>
+</CompoundPredicate>
+              <ScoreDistribution confidence="0.739130434782609" probability="0.739130434782609" recordCount="17" value="F">
+                <Extension extender="spss.com" name="probability" value="0.739130434782609"/>
+</ScoreDistribution>
+              <ScoreDistribution confidence="0.260869565217391" probability="0.260869565217391" recordCount="6" value="T">
+                <Extension extender="spss.com" name="probability" value="0.260869565217391"/>
+</ScoreDistribution>
+</Node>
+            <Node id="33" recordCount="57" score="F">
+              <CompoundPredicate booleanOperator="surrogate">
+                <CompoundPredicate booleanOperator="and">
+                  <SimplePredicate field="Est Income" operator="greaterThan" value="42000"/>
+                  <True/>
+</CompoundPredicate>
+                <True/>
+</CompoundPredicate>
+              <ScoreDistribution confidence="1" probability="1" recordCount="57" value="F">
+                <Extension extender="spss.com" name="probability" value="1"/>
+</ScoreDistribution>
+              <ScoreDistribution confidence="0" probability="0" recordCount="0" value="T">
+                <Extension extender="spss.com" name="probability" value="0"/>
+</ScoreDistribution>
+</Node>
+</Node>
+          <Node defaultChild="35" id="11" recordCount="292" score="F">
+            <Extension>
+              <X-Node>
+                <X-NodeStats adjPValue="6.13723596026584e-15" chiSquare="60.8570808935155" df1="1"/>
+</X-Node>
+</Extension>
+            <CompoundPredicate booleanOperator="surrogate">
+              <CompoundPredicate booleanOperator="or">
+                <SimplePredicate field="Paymethod" operator="equal" value="CC"/>
+                <False/>
+</CompoundPredicate>
+              <True/>
+</CompoundPredicate>
+            <ScoreDistribution confidence="0.503424657534247" probability="0.503424657534247" recordCount="147" value="F">
+              <Extension extender="spss.com" name="probability" value="0.503424657534247"/>
+</ScoreDistribution>
+            <ScoreDistribution confidence="0.496575342465753" probability="0.496575342465753" recordCount="145" value="T">
+              <Extension extender="spss.com" name="probability" value="0.496575342465753"/>
+</ScoreDistribution>
+            <Node defaultChild="55" id="34" recordCount="80" score="F">
+              <Extension>
+                <X-Node>
+                  <X-NodeStats adjPValue="0.00628518164338455" chiSquare="7.46666666666667" df1="1"/>
+</X-Node>
+</Extension>
+              <CompoundPredicate booleanOperator="surrogate">
+                <CompoundPredicate booleanOperator="or">
+                  <SimplePredicate field="LongDistanceBilltype" operator="equal" value="Intnl_discount"/>
+                  <False/>
+</CompoundPredicate>
+                <False/>
+</CompoundPredicate>
+              <ScoreDistribution confidence="0.875" probability="0.875" recordCount="70" value="F">
+                <Extension extender="spss.com" name="probability" value="0.875"/>
+</ScoreDistribution>
+              <ScoreDistribution confidence="0.125" probability="0.125" recordCount="10" value="T">
+                <Extension extender="spss.com" name="probability" value="0.125"/>
+</ScoreDistribution>
+              <Node id="55" recordCount="60" score="F">
+                <CompoundPredicate booleanOperator="surrogate">
+                  <CompoundPredicate booleanOperator="or">
+                    <SimplePredicate field="LocalBilltype" operator="equal" value="Budget"/>
+                    <False/>
+</CompoundPredicate>
+                  <True/>
+</CompoundPredicate>
+                <ScoreDistribution confidence="0.933333333333333" probability="0.933333333333333" recordCount="56" value="F">
+                  <Extension extender="spss.com" name="probability" value="0.933333333333333"/>
+</ScoreDistribution>
+                <ScoreDistribution confidence="0.0666666666666667" probability="0.0666666666666667" recordCount="4" value="T">
+                  <Extension extender="spss.com" name="probability" value="0.0666666666666667"/>
+</ScoreDistribution>
+</Node>
+              <Node id="56" recordCount="20" score="F">
+                <CompoundPredicate booleanOperator="surrogate">
+                  <CompoundPredicate booleanOperator="or">
+                    <SimplePredicate field="LocalBilltype" operator="equal" value="FreeLocal"/>
+                    <False/>
+</CompoundPredicate>
+                  <False/>
+</CompoundPredicate>
+                <ScoreDistribution confidence="0.7" probability="0.7" recordCount="14" value="F">
+                  <Extension extender="spss.com" name="probability" value="0.7"/>
+</ScoreDistribution>
+                <ScoreDistribution confidence="0.3" probability="0.3" recordCount="6" value="T">
+                  <Extension extender="spss.com" name="probability" value="0.3"/>
+</ScoreDistribution>
+</Node>
+</Node>
+            <Node defaultChild="61" id="35" recordCount="212" score="T">
+              <Extension>
+                <X-Node>
+                  <X-NodeStats adjPValue="5.50109043857848e-13" chiSquare="73.3889095544507" df1="4"/>
+</X-Node>
+</Extension>
+              <CompoundPredicate booleanOperator="surrogate">
+                <CompoundPredicate booleanOperator="or">
+                  <SimplePredicate field="LongDistanceBilltype" operator="equal" value="Standard"/>
+                  <False/>
+</CompoundPredicate>
+                <True/>
+</CompoundPredicate>
+              <ScoreDistribution confidence="0.363207547169811" probability="0.363207547169811" recordCount="77" value="F">
+                <Extension extender="spss.com" name="probability" value="0.363207547169811"/>
+</ScoreDistribution>
+              <ScoreDistribution confidence="0.636792452830189" probability="0.636792452830189" recordCount="135" value="T">
+                <Extension extender="spss.com" name="probability" value="0.636792452830189"/>
+</ScoreDistribution>
+              <Node id="57" recordCount="21" score="F">
+                <CompoundPredicate booleanOperator="surrogate">
+                  <CompoundPredicate booleanOperator="and">
+                    <True/>
+                    <SimplePredicate field="LongDistance" operator="lessOrEqual" value="2.33"/>
+</CompoundPredicate>
+                  <False/>
+</CompoundPredicate>
+                <ScoreDistribution confidence="0.904761904761905" probability="0.904761904761905" recordCount="19" value="F">
+                  <Extension extender="spss.com" name="probability" value="0.904761904761905"/>
+</ScoreDistribution>
+                <ScoreDistribution confidence="0.0952380952380952" probability="0.0952380952380952" recordCount="2" value="T">
+                  <Extension extender="spss.com" name="probability" value="0.0952380952380952"/>
+</ScoreDistribution>
+</Node>
+              <Node id="58" recordCount="45" score="T">
+                <CompoundPredicate booleanOperator="surrogate">
+                  <CompoundPredicate booleanOperator="and">
+                    <SimplePredicate field="LongDistance" operator="greaterThan" value="2.33"/>
+                    <SimplePredicate field="LongDistance" operator="lessOrEqual" value="9.57"/>
+</CompoundPredicate>
+                  <False/>
+</CompoundPredicate>
+                <ScoreDistribution confidence="0.466666666666667" probability="0.466666666666667" recordCount="21" value="F">
+                  <Extension extender="spss.com" name="probability" value="0.466666666666667"/>
+</ScoreDistribution>
+                <ScoreDistribution confidence="0.533333333333333" probability="0.533333333333333" recordCount="24" value="T">
+                  <Extension extender="spss.com" name="probability" value="0.533333333333333"/>
+</ScoreDistribution>
+</Node>
+              <Node id="59" recordCount="52" score="T">
+                <CompoundPredicate booleanOperator="surrogate">
+                  <CompoundPredicate booleanOperator="and">
+                    <SimplePredicate field="LongDistance" operator="greaterThan" value="9.57"/>
+                    <SimplePredicate field="LongDistance" operator="lessOrEqual" value="16.02"/>
+</CompoundPredicate>
+                  <False/>
+</CompoundPredicate>
+                <ScoreDistribution confidence="0.153846153846154" probability="0.153846153846154" recordCount="8" value="F">
+                  <Extension extender="spss.com" name="probability" value="0.153846153846154"/>
+</ScoreDistribution>
+                <ScoreDistribution confidence="0.846153846153846" probability="0.846153846153846" recordCount="44" value="T">
+                  <Extension extender="spss.com" name="probability" value="0.846153846153846"/>
+</ScoreDistribution>
+</Node>
+              <Node id="60" recordCount="28" score="F">
+                <CompoundPredicate booleanOperator="surrogate">
+                  <CompoundPredicate booleanOperator="and">
+                    <SimplePredicate field="LongDistance" operator="greaterThan" value="16.02"/>
+                    <SimplePredicate field="LongDistance" operator="lessOrEqual" value="20.22"/>
+</CompoundPredicate>
+                  <False/>
+</CompoundPredicate>
+                <ScoreDistribution confidence="0.75" probability="0.75" recordCount="21" value="F">
+                  <Extension extender="spss.com" name="probability" value="0.75"/>
+</ScoreDistribution>
+                <ScoreDistribution confidence="0.25" probability="0.25" recordCount="7" value="T">
+                  <Extension extender="spss.com" name="probability" value="0.25"/>
+</ScoreDistribution>
+</Node>
+              <Node id="61" recordCount="66" score="T">
+                <CompoundPredicate booleanOperator="surrogate">
+                  <CompoundPredicate booleanOperator="and">
+                    <SimplePredicate field="LongDistance" operator="greaterThan" value="20.22"/>
+                    <True/>
+</CompoundPredicate>
+                  <True/>
+</CompoundPredicate>
+                <ScoreDistribution confidence="0.121212121212121" probability="0.121212121212121" recordCount="8" value="F">
+                  <Extension extender="spss.com" name="probability" value="0.121212121212121"/>
+</ScoreDistribution>
+                <ScoreDistribution confidence="0.878787878787879" probability="0.878787878787879" recordCount="58" value="T">
+                  <Extension extender="spss.com" name="probability" value="0.878787878787879"/>
+</ScoreDistribution>
+</Node>
+</Node>
+</Node>
+          <Node defaultChild="36" id="12" recordCount="88" score="T">
+            <Extension>
+              <X-Node>
+                <X-NodeStats adjPValue="4.78896443946009e-08" chiSquare="40.3731421165143" df1="2"/>
+</X-Node>
+</Extension>
+            <CompoundPredicate booleanOperator="surrogate">
+              <CompoundPredicate booleanOperator="or">
+                <SimplePredicate field="Paymethod" operator="equal" value="CH"/>
+                <False/>
+</CompoundPredicate>
+              <False/>
+</CompoundPredicate>
+            <ScoreDistribution confidence="0.318181818181818" probability="0.318181818181818" recordCount="28" value="F">
+              <Extension extender="spss.com" name="probability" value="0.318181818181818"/>
+</ScoreDistribution>
+            <ScoreDistribution confidence="0.681818181818182" probability="0.681818181818182" recordCount="60" value="T">
+              <Extension extender="spss.com" name="probability" value="0.681818181818182"/>
+</ScoreDistribution>
+            <Node defaultChild="63" id="36" recordCount="41" score="T">
+              <Extension>
+                <X-Node>
+                  <X-NodeStats adjPValue="0.0434275212801425" chiSquare="5.97916666666667" df1="1"/>
+</X-Node>
+</Extension>
+              <CompoundPredicate booleanOperator="surrogate">
+                <CompoundPredicate booleanOperator="and">
+                  <True/>
+                  <SimplePredicate field="LongDistance" operator="lessOrEqual" value="16.02"/>
+</CompoundPredicate>
+                <True/>
+</CompoundPredicate>
+              <ScoreDistribution confidence="0.121951219512195" probability="0.121951219512195" recordCount="5" value="F">
+                <Extension extender="spss.com" name="probability" value="0.121951219512195"/>
+</ScoreDistribution>
+              <ScoreDistribution confidence="0.878048780487805" probability="0.878048780487805" recordCount="36" value="T">
+                <Extension extender="spss.com" name="probability" value="0.878048780487805"/>
+</ScoreDistribution>
+              <Node id="62" recordCount="20" score="T">
+                <CompoundPredicate booleanOperator="surrogate">
+                  <CompoundPredicate booleanOperator="and">
+                    <True/>
+                    <SimplePredicate field="RatePlan" operator="lessOrEqual" value="2"/>
+</CompoundPredicate>
+                  <False/>
+</CompoundPredicate>
+                <ScoreDistribution confidence="0.25" probability="0.25" recordCount="5" value="F">
+                  <Extension extender="spss.com" name="probability" value="0.25"/>
+</ScoreDistribution>
+                <ScoreDistribution confidence="0.75" probability="0.75" recordCount="15" value="T">
+                  <Extension extender="spss.com" name="probability" value="0.75"/>
+</ScoreDistribution>
+</Node>
+              <Node id="63" recordCount="21" score="T">
+                <CompoundPredicate booleanOperator="surrogate">
+                  <CompoundPredicate booleanOperator="and">
+                    <SimplePredicate field="RatePlan" operator="greaterThan" value="2"/>
+                    <True/>
+</CompoundPredicate>
+                  <True/>
+</CompoundPredicate>
+                <ScoreDistribution confidence="0" probability="0" recordCount="0" value="F">
+                  <Extension extender="spss.com" name="probability" value="0"/>
+</ScoreDistribution>
+                <ScoreDistribution confidence="1" probability="1" recordCount="21" value="T">
+                  <Extension extender="spss.com" name="probability" value="1"/>
+</ScoreDistribution>
+</Node>
+</Node>
+            <Node id="37" recordCount="24" score="F">
+              <CompoundPredicate booleanOperator="surrogate">
+                <CompoundPredicate booleanOperator="and">
+                  <SimplePredicate field="LongDistance" operator="greaterThan" value="16.02"/>
+                  <SimplePredicate field="LongDistance" operator="lessOrEqual" value="25.03"/>
+</CompoundPredicate>
+                <False/>
+</CompoundPredicate>
+              <ScoreDistribution confidence="0.833333333333333" probability="0.833333333333333" recordCount="20" value="F">
+                <Extension extender="spss.com" name="probability" value="0.833333333333333"/>
+</ScoreDistribution>
+              <ScoreDistribution confidence="0.166666666666667" probability="0.166666666666667" recordCount="4" value="T">
+                <Extension extender="spss.com" name="probability" value="0.166666666666667"/>
+</ScoreDistribution>
+</Node>
+            <Node id="38" recordCount="23" score="T">
+              <CompoundPredicate booleanOperator="surrogate">
+                <CompoundPredicate booleanOperator="and">
+                  <SimplePredicate field="LongDistance" operator="greaterThan" value="25.03"/>
+                  <True/>
+</CompoundPredicate>
+                <False/>
+</CompoundPredicate>
+              <ScoreDistribution confidence="0.130434782608696" probability="0.130434782608696" recordCount="3" value="F">
+                <Extension extender="spss.com" name="probability" value="0.130434782608696"/>
+</ScoreDistribution>
+              <ScoreDistribution confidence="0.869565217391304" probability="0.869565217391304" recordCount="20" value="T">
+                <Extension extender="spss.com" name="probability" value="0.869565217391304"/>
+</ScoreDistribution>
+</Node>
+</Node>
+</Node>
+        <Node defaultChild="16" id="4" recordCount="527" score="F">
+          <Extension>
+            <X-Node>
+              <X-NodeStats adjPValue="4.64509487569602e-11" chiSquare="67.3260871849699" df1="5"/>
+</X-Node>
+</Extension>
+          <CompoundPredicate booleanOperator="surrogate">
+            <CompoundPredicate booleanOperator="and">
+              <SimplePredicate field="Children" operator="greaterThan" value="1"/>
+              <True/>
+</CompoundPredicate>
+            <True/>
+</CompoundPredicate>
+          <ScoreDistribution confidence="0.925996204933586" probability="0.925996204933586" recordCount="488" value="F">
+            <Extension extender="spss.com" name="probability" value="0.925996204933586"/>
+</ScoreDistribution>
+          <ScoreDistribution confidence="0.0740037950664136" probability="0.0740037950664136" recordCount="39" value="T">
+            <Extension extender="spss.com" name="probability" value="0.0740037950664136"/>
+</ScoreDistribution>
+          <Node id="13" recordCount="46" score="F">
+            <CompoundPredicate booleanOperator="surrogate">
+              <CompoundPredicate booleanOperator="and">
+                <True/>
+                <SimplePredicate field="Usage" operator="lessOrEqual" value="20.1"/>
+</CompoundPredicate>
+              <False/>
+</CompoundPredicate>
+            <ScoreDistribution confidence="0.91304347826087" probability="0.91304347826087" recordCount="42" value="F">
+              <Extension extender="spss.com" name="probability" value="0.91304347826087"/>
+</ScoreDistribution>
+            <ScoreDistribution confidence="0.0869565217391304" probability="0.0869565217391304" recordCount="4" value="T">
+              <Extension extender="spss.com" name="probability" value="0.0869565217391304"/>
+</ScoreDistribution>
+</Node>
+          <Node id="14" recordCount="89" score="F">
+            <CompoundPredicate booleanOperator="surrogate">
+              <CompoundPredicate booleanOperator="and">
+                <SimplePredicate field="Usage" operator="greaterThan" value="20.1"/>
+                <SimplePredicate field="Usage" operator="lessOrEqual" value="29.04"/>
+</CompoundPredicate>
+              <False/>
+</CompoundPredicate>
+            <ScoreDistribution confidence="1" probability="1" recordCount="89" value="F">
+              <Extension extender="spss.com" name="probability" value="1"/>
+</ScoreDistribution>
+            <ScoreDistribution confidence="0" probability="0" recordCount="0" value="T">
+              <Extension extender="spss.com" name="probability" value="0"/>
+</ScoreDistribution>
+</Node>
+          <Node defaultChild="39" id="15" recordCount="125" score="F">
+            <Extension>
+              <X-Node>
+                <X-NodeStats adjPValue="0.00293272431357856" chiSquare="10.8695652173913" df1="1"/>
+</X-Node>
+</Extension>
+            <CompoundPredicate booleanOperator="surrogate">
+              <CompoundPredicate booleanOperator="and">
+                <SimplePredicate field="Usage" operator="greaterThan" value="29.04"/>
+                <SimplePredicate field="Usage" operator="lessOrEqual" value="56.23"/>
+</CompoundPredicate>
+              <False/>
+</CompoundPredicate>
+            <ScoreDistribution confidence="0.92" probability="0.92" recordCount="115" value="F">
+              <Extension extender="spss.com" name="probability" value="0.92"/>
+</ScoreDistribution>
+            <ScoreDistribution confidence="0.08" probability="0.08" recordCount="10" value="T">
+              <Extension extender="spss.com" name="probability" value="0.08"/>
+</ScoreDistribution>
+            <Node defaultChild="64" id="39" recordCount="100" score="F">
+              <Extension>
+                <X-Node>
+                  <X-NodeStats adjPValue="0.0108936753400836" chiSquare="8.45959595959596" df1="1"/>
+</X-Node>
+</Extension>
+              <CompoundPredicate booleanOperator="surrogate">
+                <CompoundPredicate booleanOperator="or">
+                  <SimplePredicate field="Paymethod" operator="equal" value="Auto"/>
+                  <SimplePredicate field="Paymethod" operator="equal" value="CC"/>
+</CompoundPredicate>
+                <True/>
+</CompoundPredicate>
+              <ScoreDistribution confidence="0.96" probability="0.96" recordCount="96" value="F">
+                <Extension extender="spss.com" name="probability" value="0.96"/>
+</ScoreDistribution>
+              <ScoreDistribution confidence="0.04" probability="0.04" recordCount="4" value="T">
+                <Extension extender="spss.com" name="probability" value="0.04"/>
+</ScoreDistribution>
+              <Node id="64" recordCount="67" score="F">
+                <CompoundPredicate booleanOperator="surrogate">
+                  <CompoundPredicate booleanOperator="and">
+                    <True/>
+                    <SimplePredicate field="RatePlan" operator="lessOrEqual" value="3"/>
+</CompoundPredicate>
+                  <True/>
+</CompoundPredicate>
+                <ScoreDistribution confidence="1" probability="1" recordCount="67" value="F">
+                  <Extension extender="spss.com" name="probability" value="1"/>
+</ScoreDistribution>
+                <ScoreDistribution confidence="0" probability="0" recordCount="0" value="T">
+                  <Extension extender="spss.com" name="probability" value="0"/>
+</ScoreDistribution>
+</Node>
+              <Node id="65" recordCount="33" score="F">
+                <CompoundPredicate booleanOperator="surrogate">
+                  <CompoundPredicate booleanOperator="and">
+                    <SimplePredicate field="RatePlan" operator="greaterThan" value="3"/>
+                    <True/>
+</CompoundPredicate>
+                  <False/>
+</CompoundPredicate>
+                <ScoreDistribution confidence="0.878787878787879" probability="0.878787878787879" recordCount="29" value="F">
+                  <Extension extender="spss.com" name="probability" value="0.878787878787879"/>
+</ScoreDistribution>
+                <ScoreDistribution confidence="0.121212121212121" probability="0.121212121212121" recordCount="4" value="T">
+                  <Extension extender="spss.com" name="probability" value="0.121212121212121"/>
+</ScoreDistribution>
+</Node>
+</Node>
+            <Node id="40" recordCount="25" score="F">
+              <CompoundPredicate booleanOperator="surrogate">
+                <CompoundPredicate booleanOperator="or">
+                  <SimplePredicate field="Paymethod" operator="equal" value="CH"/>
+                  <False/>
+</CompoundPredicate>
+                <False/>
+</CompoundPredicate>
+              <ScoreDistribution confidence="0.76" probability="0.76" recordCount="19" value="F">
+                <Extension extender="spss.com" name="probability" value="0.76"/>
+</ScoreDistribution>
+              <ScoreDistribution confidence="0.24" probability="0.24" recordCount="6" value="T">
+                <Extension extender="spss.com" name="probability" value="0.24"/>
+</ScoreDistribution>
+</Node>
+</Node>
+          <Node id="16" recordCount="137" score="F">
+            <CompoundPredicate booleanOperator="surrogate">
+              <CompoundPredicate booleanOperator="and">
+                <SimplePredicate field="Usage" operator="greaterThan" value="56.23"/>
+                <SimplePredicate field="Usage" operator="lessOrEqual" value="94.88"/>
+</CompoundPredicate>
+              <True/>
+</CompoundPredicate>
+            <ScoreDistribution confidence="1" probability="1" recordCount="137" value="F">
+              <Extension extender="spss.com" name="probability" value="1"/>
+</ScoreDistribution>
+            <ScoreDistribution confidence="0" probability="0" recordCount="0" value="T">
+              <Extension extender="spss.com" name="probability" value="0"/>
+</ScoreDistribution>
+</Node>
+          <Node defaultChild="42" id="17" recordCount="62" score="F">
+            <Extension>
+              <X-Node>
+                <X-NodeStats adjPValue="2.57016852650045e-05" chiSquare="21.1335548172757" df1="1"/>
+</X-Node>
+</Extension>
+            <CompoundPredicate booleanOperator="surrogate">
+              <CompoundPredicate booleanOperator="and">
+                <SimplePredicate field="Usage" operator="greaterThan" value="94.88"/>
+                <SimplePredicate field="Usage" operator="lessOrEqual" value="117.85"/>
+</CompoundPredicate>
+              <False/>
+</CompoundPredicate>
+            <ScoreDistribution confidence="0.693548387096774" probability="0.693548387096774" recordCount="43" value="F">
+              <Extension extender="spss.com" name="probability" value="0.693548387096774"/>
+</ScoreDistribution>
+            <ScoreDistribution confidence="0.306451612903226" probability="0.306451612903226" recordCount="19" value="T">
+              <Extension extender="spss.com" name="probability" value="0.306451612903226"/>
+</ScoreDistribution>
+            <Node id="41" recordCount="27" score="F">
+              <CompoundPredicate booleanOperator="surrogate">
+                <CompoundPredicate booleanOperator="and">
+                  <True/>
+                  <SimplePredicate field="Age" operator="lessOrEqual" value="48.533333"/>
+</CompoundPredicate>
+                <False/>
+</CompoundPredicate>
+              <ScoreDistribution confidence="1" probability="1" recordCount="27" value="F">
+                <Extension extender="spss.com" name="probability" value="1"/>
+</ScoreDistribution>
+              <ScoreDistribution confidence="0" probability="0" recordCount="0" value="T">
+                <Extension extender="spss.com" name="probability" value="0"/>
+</ScoreDistribution>
+</Node>
+            <Node id="42" recordCount="35" score="T">
+              <CompoundPredicate booleanOperator="surrogate">
+                <CompoundPredicate booleanOperator="and">
+                  <SimplePredicate field="Age" operator="greaterThan" value="48.533333"/>
+                  <True/>
+</CompoundPredicate>
+                <True/>
+</CompoundPredicate>
+              <ScoreDistribution confidence="0.457142857142857" probability="0.457142857142857" recordCount="16" value="F">
+                <Extension extender="spss.com" name="probability" value="0.457142857142857"/>
+</ScoreDistribution>
+              <ScoreDistribution confidence="0.542857142857143" probability="0.542857142857143" recordCount="19" value="T">
+                <Extension extender="spss.com" name="probability" value="0.542857142857143"/>
+</ScoreDistribution>
+</Node>
+</Node>
+          <Node defaultChild="44" id="18" recordCount="68" score="F">
+            <Extension>
+              <X-Node>
+                <X-NodeStats adjPValue="7.06429824505292e-05" chiSquare="15.7935483870968" df1="1"/>
+</X-Node>
+</Extension>
+            <CompoundPredicate booleanOperator="surrogate">
+              <CompoundPredicate booleanOperator="and">
+                <SimplePredicate field="Usage" operator="greaterThan" value="117.85"/>
+                <True/>
+</CompoundPredicate>
+              <False/>
+</CompoundPredicate>
+            <ScoreDistribution confidence="0.911764705882353" probability="0.911764705882353" recordCount="62" value="F">
+              <Extension extender="spss.com" name="probability" value="0.911764705882353"/>
+</ScoreDistribution>
+            <ScoreDistribution confidence="0.0882352941176471" probability="0.0882352941176471" recordCount="6" value="T">
+              <Extension extender="spss.com" name="probability" value="0.0882352941176471"/>
+</ScoreDistribution>
+            <Node id="43" recordCount="20" score="F">
+              <CompoundPredicate booleanOperator="surrogate">
+                <CompoundPredicate booleanOperator="or">
+                  <SimplePredicate field="LongDistanceBilltype" operator="equal" value="Intnl_discount"/>
+                  <False/>
+</CompoundPredicate>
+                <False/>
+</CompoundPredicate>
+              <ScoreDistribution confidence="0.7" probability="0.7" recordCount="14" value="F">
+                <Extension extender="spss.com" name="probability" value="0.7"/>
+</ScoreDistribution>
+              <ScoreDistribution confidence="0.3" probability="0.3" recordCount="6" value="T">
+                <Extension extender="spss.com" name="probability" value="0.3"/>
+</ScoreDistribution>
+</Node>
+            <Node id="44" recordCount="48" score="F">
+              <CompoundPredicate booleanOperator="surrogate">
+                <CompoundPredicate booleanOperator="or">
+                  <SimplePredicate field="LongDistanceBilltype" operator="equal" value="Standard"/>
+                  <False/>
+</CompoundPredicate>
+                <True/>
+</CompoundPredicate>
+              <ScoreDistribution confidence="1" probability="1" recordCount="48" value="F">
+                <Extension extender="spss.com" name="probability" value="1"/>
+</ScoreDistribution>
+              <ScoreDistribution confidence="0" probability="0" recordCount="0" value="T">
+                <Extension extender="spss.com" name="probability" value="0"/>
+</ScoreDistribution>
+</Node>
+</Node>
+</Node>
+</Node>
+      <Node defaultChild="5" id="2" recordCount="658" score="T">
+        <Extension>
+          <X-Node>
+            <X-NodeStats adjPValue="9.82902163774675e-30" chiSquare="151.943872372152" df1="4"/>
+</X-Node>
+</Extension>
+        <CompoundPredicate booleanOperator="surrogate">
+          <CompoundPredicate booleanOperator="or">
+            <SimplePredicate field="Status" operator="equal" value="S"/>
+            <False/>
+</CompoundPredicate>
+          <False/>
+</CompoundPredicate>
+        <ScoreDistribution confidence="0.366261398176292" probability="0.366261398176292" recordCount="241" value="F">
+          <Extension extender="spss.com" name="probability" value="0.366261398176292"/>
+</ScoreDistribution>
+        <ScoreDistribution confidence="0.633738601823708" probability="0.633738601823708" recordCount="417" value="T">
+          <Extension extender="spss.com" name="probability" value="0.633738601823708"/>
+</ScoreDistribution>
+        <Node defaultChild="23" id="5" recordCount="331" score="T">
+          <Extension>
+            <X-Node>
+              <X-NodeStats adjPValue="1.02071525523278e-16" chiSquare="90.9930343868174" df1="4"/>
+</X-Node>
+</Extension>
+          <CompoundPredicate booleanOperator="surrogate">
+            <CompoundPredicate booleanOperator="and">
+              <True/>
+              <SimplePredicate field="Est Income" operator="lessOrEqual" value="42000"/>
+</CompoundPredicate>
+            <True/>
+</CompoundPredicate>
+          <ScoreDistribution confidence="0.157099697885196" probability="0.157099697885196" recordCount="52" value="F">
+            <Extension extender="spss.com" name="probability" value="0.157099697885196"/>
+</ScoreDistribution>
+          <ScoreDistribution confidence="0.842900302114804" probability="0.842900302114804" recordCount="279" value="T">
+            <Extension extender="spss.com" name="probability" value="0.842900302114804"/>
+</ScoreDistribution>
+          <Node defaultChild="45" id="19" recordCount="55" score="T">
+            <Extension>
+              <X-Node>
+                <X-NodeStats adjPValue="0.000793742041908631" chiSquare="11.2558093808094" df1="1"/>
+</X-Node>
+</Extension>
+            <CompoundPredicate booleanOperator="surrogate">
+              <CompoundPredicate booleanOperator="and">
+                <True/>
+                <SimplePredicate field="Usage" operator="lessOrEqual" value="29.04"/>
+</CompoundPredicate>
+              <False/>
+</CompoundPredicate>
+            <ScoreDistribution confidence="0.490909090909091" probability="0.490909090909091" recordCount="27" value="F">
+              <Extension extender="spss.com" name="probability" value="0.490909090909091"/>
+</ScoreDistribution>
+            <ScoreDistribution confidence="0.509090909090909" probability="0.509090909090909" recordCount="28" value="T">
+              <Extension extender="spss.com" name="probability" value="0.509090909090909"/>
+</ScoreDistribution>
+            <Node defaultChild="67" id="45" recordCount="37" score="F">
+              <Extension>
+                <X-Node>
+                  <X-NodeStats adjPValue="0.0483536478891369" chiSquare="7.5370757918552" df1="1"/>
+</X-Node>
+</Extension>
+              <CompoundPredicate booleanOperator="surrogate">
+                <CompoundPredicate booleanOperator="or">
+                  <SimplePredicate field="Car Owner" operator="equal" value="N"/>
+                  <False/>
+</CompoundPredicate>
+                <True/>
+</CompoundPredicate>
+              <ScoreDistribution confidence="0.648648648648649" probability="0.648648648648649" recordCount="24" value="F">
+                <Extension extender="spss.com" name="probability" value="0.648648648648649"/>
+</ScoreDistribution>
+              <ScoreDistribution confidence="0.351351351351351" probability="0.351351351351351" recordCount="13" value="T">
+                <Extension extender="spss.com" name="probability" value="0.351351351351351"/>
+</ScoreDistribution>
+              <Node id="66" recordCount="17" score="F">
+                <CompoundPredicate booleanOperator="surrogate">
+                  <CompoundPredicate booleanOperator="and">
+                    <True/>
+                    <SimplePredicate field="Age" operator="lessOrEqual" value="45.486667"/>
+</CompoundPredicate>
+                  <False/>
+</CompoundPredicate>
+                <ScoreDistribution confidence="0.882352941176471" probability="0.882352941176471" recordCount="15" value="F">
+                  <Extension extender="spss.com" name="probability" value="0.882352941176471"/>
+</ScoreDistribution>
+                <ScoreDistribution confidence="0.117647058823529" probability="0.117647058823529" recordCount="2" value="T">
+                  <Extension extender="spss.com" name="probability" value="0.117647058823529"/>
+</ScoreDistribution>
+</Node>
+              <Node id="67" recordCount="20" score="T">
+                <CompoundPredicate booleanOperator="surrogate">
+                  <CompoundPredicate booleanOperator="and">
+                    <SimplePredicate field="Age" operator="greaterThan" value="45.486667"/>
+                    <True/>
+</CompoundPredicate>
+                  <True/>
+</CompoundPredicate>
+                <ScoreDistribution confidence="0.45" probability="0.45" recordCount="9" value="F">
+                  <Extension extender="spss.com" name="probability" value="0.45"/>
+</ScoreDistribution>
+                <ScoreDistribution confidence="0.55" probability="0.55" recordCount="11" value="T">
+                  <Extension extender="spss.com" name="probability" value="0.55"/>
+</ScoreDistribution>
+</Node>
+</Node>
+            <Node id="46" recordCount="18" score="T">
+              <CompoundPredicate booleanOperator="surrogate">
+                <CompoundPredicate booleanOperator="or">
+                  <SimplePredicate field="Car Owner" operator="equal" value="Y"/>
+                  <False/>
+</CompoundPredicate>
+                <False/>
+</CompoundPredicate>
+              <ScoreDistribution confidence="0.166666666666667" probability="0.166666666666667" recordCount="3" value="F">
+                <Extension extender="spss.com" name="probability" value="0.166666666666667"/>
+</ScoreDistribution>
+              <ScoreDistribution confidence="0.833333333333333" probability="0.833333333333333" recordCount="15" value="T">
+                <Extension extender="spss.com" name="probability" value="0.833333333333333"/>
+</ScoreDistribution>
+</Node>
+</Node>
+          <Node id="20" recordCount="19" score="T">
+            <CompoundPredicate booleanOperator="surrogate">
+              <CompoundPredicate booleanOperator="and">
+                <SimplePredicate field="Usage" operator="greaterThan" value="29.04"/>
+                <SimplePredicate field="Usage" operator="lessOrEqual" value="37.55"/>
+</CompoundPredicate>
+              <False/>
+</CompoundPredicate>
+            <ScoreDistribution confidence="0.157894736842105" probability="0.157894736842105" recordCount="3" value="F">
+              <Extension extender="spss.com" name="probability" value="0.157894736842105"/>
+</ScoreDistribution>
+            <ScoreDistribution confidence="0.842105263157895" probability="0.842105263157895" recordCount="16" value="T">
+              <Extension extender="spss.com" name="probability" value="0.842105263157895"/>
+</ScoreDistribution>
+</Node>
+          <Node id="21" recordCount="29" score="T">
+            <CompoundPredicate booleanOperator="surrogate">
+              <CompoundPredicate booleanOperator="and">
+                <SimplePredicate field="Usage" operator="greaterThan" value="37.55"/>
+                <SimplePredicate field="Usage" operator="lessOrEqual" value="44.13"/>
+</CompoundPredicate>
+              <False/>
+</CompoundPredicate>
+            <ScoreDistribution confidence="0" probability="0" recordCount="0" value="F">
+              <Extension extender="spss.com" name="probability" value="0"/>
+</ScoreDistribution>
+            <ScoreDistribution confidence="1" probability="1" recordCount="29" value="T">
+              <Extension extender="spss.com" name="probability" value="1"/>
+</ScoreDistribution>
+</Node>
+          <Node id="22" recordCount="24" score="F">
+            <CompoundPredicate booleanOperator="surrogate">
+              <CompoundPredicate booleanOperator="and">
+                <SimplePredicate field="Usage" operator="greaterThan" value="44.13"/>
+                <SimplePredicate field="Usage" operator="lessOrEqual" value="56.23"/>
+</CompoundPredicate>
+              <False/>
+</CompoundPredicate>
+            <ScoreDistribution confidence="0.5" probability="0.5" recordCount="12" value="F">
+              <Extension extender="spss.com" name="probability" value="0.5"/>
+</ScoreDistribution>
+            <ScoreDistribution confidence="0.5" probability="0.5" recordCount="12" value="T">
+              <Extension extender="spss.com" name="probability" value="0.5"/>
+</ScoreDistribution>
+</Node>
+          <Node defaultChild="47" id="23" recordCount="204" score="T">
+            <Extension>
+              <X-Node>
+                <X-NodeStats adjPValue="1.8783981487415e-05" chiSquare="18.3087762880061" df1="1"/>
+</X-Node>
+</Extension>
+            <CompoundPredicate booleanOperator="surrogate">
+              <CompoundPredicate booleanOperator="and">
+                <SimplePredicate field="Usage" operator="greaterThan" value="56.23"/>
+                <True/>
+</CompoundPredicate>
+              <True/>
+</CompoundPredicate>
+            <ScoreDistribution confidence="0.0490196078431373" probability="0.0490196078431373" recordCount="10" value="F">
+              <Extension extender="spss.com" name="probability" value="0.0490196078431373"/>
+</ScoreDistribution>
+            <ScoreDistribution confidence="0.950980392156863" probability="0.950980392156863" recordCount="194" value="T">
+              <Extension extender="spss.com" name="probability" value="0.950980392156863"/>
+</ScoreDistribution>
+            <Node id="47" recordCount="166" score="T">
+              <CompoundPredicate booleanOperator="surrogate">
+                <CompoundPredicate booleanOperator="or">
+                  <SimplePredicate field="Gender" operator="equal" value="F"/>
+                  <False/>
+</CompoundPredicate>
+                <True/>
+</CompoundPredicate>
+              <ScoreDistribution confidence="0.0180722891566265" probability="0.0180722891566265" recordCount="3" value="F">
+                <Extension extender="spss.com" name="probability" value="0.0180722891566265"/>
+</ScoreDistribution>
+              <ScoreDistribution confidence="0.981927710843374" probability="0.981927710843374" recordCount="163" value="T">
+                <Extension extender="spss.com" name="probability" value="0.981927710843374"/>
+</ScoreDistribution>
+</Node>
+            <Node defaultChild="68" id="48" recordCount="38" score="T">
+              <Extension>
+                <X-Node>
+                  <X-NodeStats adjPValue="0.00605083579847526" chiSquare="9.53405017921147" df1="1"/>
+</X-Node>
+</Extension>
+              <CompoundPredicate booleanOperator="surrogate">
+                <CompoundPredicate booleanOperator="or">
+                  <SimplePredicate field="Gender" operator="equal" value="M"/>
+                  <False/>
+</CompoundPredicate>
+                <False/>
+</CompoundPredicate>
+              <ScoreDistribution confidence="0.184210526315789" probability="0.184210526315789" recordCount="7" value="F">
+                <Extension extender="spss.com" name="probability" value="0.184210526315789"/>
+</ScoreDistribution>
+              <ScoreDistribution confidence="0.815789473684211" probability="0.815789473684211" recordCount="31" value="T">
+                <Extension extender="spss.com" name="probability" value="0.815789473684211"/>
+</ScoreDistribution>
+              <Node id="68" recordCount="20" score="T">
+                <CompoundPredicate booleanOperator="surrogate">
+                  <CompoundPredicate booleanOperator="or">
+                    <SimplePredicate field="Paymethod" operator="equal" value="Auto"/>
+                    <SimplePredicate field="Paymethod" operator="equal" value="CH"/>
+</CompoundPredicate>
+                  <True/>
+</CompoundPredicate>
+                <ScoreDistribution confidence="0" probability="0" recordCount="0" value="F">
+                  <Extension extender="spss.com" name="probability" value="0"/>
+</ScoreDistribution>
+                <ScoreDistribution confidence="1" probability="1" recordCount="20" value="T">
+                  <Extension extender="spss.com" name="probability" value="1"/>
+</ScoreDistribution>
+</Node>
+              <Node id="69" recordCount="18" score="T">
+                <CompoundPredicate booleanOperator="surrogate">
+                  <CompoundPredicate booleanOperator="or">
+                    <SimplePredicate field="Paymethod" operator="equal" value="CC"/>
+                    <False/>
+</CompoundPredicate>
+                  <False/>
+</CompoundPredicate>
+                <ScoreDistribution confidence="0.388888888888889" probability="0.388888888888889" recordCount="7" value="F">
+                  <Extension extender="spss.com" name="probability" value="0.388888888888889"/>
+</ScoreDistribution>
+                <ScoreDistribution confidence="0.611111111111111" probability="0.611111111111111" recordCount="11" value="T">
+                  <Extension extender="spss.com" name="probability" value="0.611111111111111"/>
+</ScoreDistribution>
+</Node>
+</Node>
+</Node>
+</Node>
+        <Node defaultChild="24" id="6" recordCount="88" score="F">
+          <Extension>
+            <X-Node>
+              <X-NodeStats adjPValue="4.16757576888038e-10" chiSquare="40.3864734299517" df1="1"/>
+</X-Node>
+</Extension>
+          <CompoundPredicate booleanOperator="surrogate">
+            <CompoundPredicate booleanOperator="and">
+              <SimplePredicate field="Est Income" operator="greaterThan" value="42000"/>
+              <SimplePredicate field="Est Income" operator="lessOrEqual" value="65000"/>
+</CompoundPredicate>
+            <False/>
+</CompoundPredicate>
+          <ScoreDistribution confidence="0.625" probability="0.625" recordCount="55" value="F">
+            <Extension extender="spss.com" name="probability" value="0.625"/>
+</ScoreDistribution>
+          <ScoreDistribution confidence="0.375" probability="0.375" recordCount="33" value="T">
+            <Extension extender="spss.com" name="probability" value="0.375"/>
+</ScoreDistribution>
+          <Node defaultChild="50" id="24" recordCount="69" score="F">
+            <Extension>
+              <X-Node>
+                <X-NodeStats adjPValue="1.09000870372353e-06" chiSquare="28.0032467532467" df1="1"/>
+</X-Node>
+</Extension>
+            <CompoundPredicate booleanOperator="surrogate">
+              <CompoundPredicate booleanOperator="and">
+                <True/>
+                <SimplePredicate field="International" operator="lessOrEqual" value="0"/>
+</CompoundPredicate>
+              <True/>
+</CompoundPredicate>
+            <ScoreDistribution confidence="0.797101449275362" probability="0.797101449275362" recordCount="55" value="F">
+              <Extension extender="spss.com" name="probability" value="0.797101449275362"/>
+</ScoreDistribution>
+            <ScoreDistribution confidence="0.202898550724638" probability="0.202898550724638" recordCount="14" value="T">
+              <Extension extender="spss.com" name="probability" value="0.202898550724638"/>
+</ScoreDistribution>
+            <Node id="49" recordCount="23" score="T">
+              <CompoundPredicate booleanOperator="surrogate">
+                <CompoundPredicate booleanOperator="and">
+                  <True/>
+                  <SimplePredicate field="Age" operator="lessOrEqual" value="41.913333"/>
+</CompoundPredicate>
+                <False/>
+</CompoundPredicate>
+              <ScoreDistribution confidence="0.434782608695652" probability="0.434782608695652" recordCount="10" value="F">
+                <Extension extender="spss.com" name="probability" value="0.434782608695652"/>
+</ScoreDistribution>
+              <ScoreDistribution confidence="0.565217391304348" probability="0.565217391304348" recordCount="13" value="T">
+                <Extension extender="spss.com" name="probability" value="0.565217391304348"/>
+</ScoreDistribution>
+</Node>
+            <Node id="50" recordCount="46" score="F">
+              <CompoundPredicate booleanOperator="surrogate">
+                <CompoundPredicate booleanOperator="and">
+                  <SimplePredicate field="Age" operator="greaterThan" value="41.913333"/>
+                  <True/>
+</CompoundPredicate>
+                <True/>
+</CompoundPredicate>
+              <ScoreDistribution confidence="0.978260869565217" probability="0.978260869565217" recordCount="45" value="F">
+                <Extension extender="spss.com" name="probability" value="0.978260869565217"/>
+</ScoreDistribution>
+              <ScoreDistribution confidence="0.0217391304347826" probability="0.0217391304347826" recordCount="1" value="T">
+                <Extension extender="spss.com" name="probability" value="0.0217391304347826"/>
+</ScoreDistribution>
+</Node>
+</Node>
+          <Node id="25" recordCount="19" score="T">
+            <CompoundPredicate booleanOperator="surrogate">
+              <CompoundPredicate booleanOperator="and">
+                <SimplePredicate field="International" operator="greaterThan" value="0"/>
+                <True/>
+</CompoundPredicate>
+              <False/>
+</CompoundPredicate>
+            <ScoreDistribution confidence="0" probability="0" recordCount="0" value="F">
+              <Extension extender="spss.com" name="probability" value="0"/>
+</ScoreDistribution>
+            <ScoreDistribution confidence="1" probability="1" recordCount="19" value="T">
+              <Extension extender="spss.com" name="probability" value="1"/>
+</ScoreDistribution>
+</Node>
+</Node>
+        <Node defaultChild="26" id="7" recordCount="54" score="F">
+          <Extension>
+            <X-Node>
+              <X-NodeStats adjPValue="0.0253715372676697" chiSquare="4.99834710743802" df1="1"/>
+</X-Node>
+</Extension>
+          <CompoundPredicate booleanOperator="surrogate">
+            <CompoundPredicate booleanOperator="and">
+              <SimplePredicate field="Est Income" operator="greaterThan" value="65000"/>
+              <SimplePredicate field="Est Income" operator="lessOrEqual" value="73400"/>
+</CompoundPredicate>
+            <False/>
+</CompoundPredicate>
+          <ScoreDistribution confidence="0.814814814814815" probability="0.814814814814815" recordCount="44" value="F">
+            <Extension extender="spss.com" name="probability" value="0.814814814814815"/>
+</ScoreDistribution>
+          <ScoreDistribution confidence="0.185185185185185" probability="0.185185185185185" recordCount="10" value="T">
+            <Extension extender="spss.com" name="probability" value="0.185185185185185"/>
+</ScoreDistribution>
+          <Node id="26" recordCount="33" score="F">
+            <CompoundPredicate booleanOperator="surrogate">
+              <CompoundPredicate booleanOperator="or">
+                <SimplePredicate field="Gender" operator="equal" value="F"/>
+                <False/>
+</CompoundPredicate>
+              <True/>
+</CompoundPredicate>
+            <ScoreDistribution confidence="0.909090909090909" probability="0.909090909090909" recordCount="30" value="F">
+              <Extension extender="spss.com" name="probability" value="0.909090909090909"/>
+</ScoreDistribution>
+            <ScoreDistribution confidence="0.0909090909090909" probability="0.0909090909090909" recordCount="3" value="T">
+              <Extension extender="spss.com" name="probability" value="0.0909090909090909"/>
+</ScoreDistribution>
+</Node>
+          <Node id="27" recordCount="21" score="F">
+            <CompoundPredicate booleanOperator="surrogate">
+              <CompoundPredicate booleanOperator="or">
+                <SimplePredicate field="Gender" operator="equal" value="M"/>
+                <False/>
+</CompoundPredicate>
+              <False/>
+</CompoundPredicate>
+            <ScoreDistribution confidence="0.666666666666667" probability="0.666666666666667" recordCount="14" value="F">
+              <Extension extender="spss.com" name="probability" value="0.666666666666667"/>
+</ScoreDistribution>
+            <ScoreDistribution confidence="0.333333333333333" probability="0.333333333333333" recordCount="7" value="T">
+              <Extension extender="spss.com" name="probability" value="0.333333333333333"/>
+</ScoreDistribution>
+</Node>
+</Node>
+        <Node defaultChild="29" id="8" recordCount="55" score="F">
+          <Extension>
+            <X-Node>
+              <X-NodeStats adjPValue="1.04410599087333e-08" chiSquare="32.7573529411765" df1="1"/>
+</X-Node>
+</Extension>
+          <CompoundPredicate booleanOperator="surrogate">
+            <CompoundPredicate booleanOperator="and">
+              <SimplePredicate field="Est Income" operator="greaterThan" value="73400"/>
+              <SimplePredicate field="Est Income" operator="lessOrEqual" value="83891.9"/>
+</CompoundPredicate>
+            <False/>
+</CompoundPredicate>
+          <ScoreDistribution confidence="0.618181818181818" probability="0.618181818181818" recordCount="34" value="F">
+            <Extension extender="spss.com" name="probability" value="0.618181818181818"/>
+</ScoreDistribution>
+          <ScoreDistribution confidence="0.381818181818182" probability="0.381818181818182" recordCount="21" value="T">
+            <Extension extender="spss.com" name="probability" value="0.381818181818182"/>
+</ScoreDistribution>
+          <Node id="28" recordCount="27" score="F">
+            <CompoundPredicate booleanOperator="surrogate">
+              <CompoundPredicate booleanOperator="or">
+                <SimplePredicate field="Paymethod" operator="equal" value="Auto"/>
+                <False/>
+</CompoundPredicate>
+              <False/>
+</CompoundPredicate>
+            <ScoreDistribution confidence="1" probability="1" recordCount="27" value="F">
+              <Extension extender="spss.com" name="probability" value="1"/>
+</ScoreDistribution>
+            <ScoreDistribution confidence="0" probability="0" recordCount="0" value="T">
+              <Extension extender="spss.com" name="probability" value="0"/>
+</ScoreDistribution>
+</Node>
+          <Node id="29" recordCount="28" score="T">
+            <CompoundPredicate booleanOperator="surrogate">
+              <CompoundPredicate booleanOperator="or">
+                <SimplePredicate field="Paymethod" operator="equal" value="CC"/>
+                <False/>
+</CompoundPredicate>
+              <True/>
+</CompoundPredicate>
+            <ScoreDistribution confidence="0.25" probability="0.25" recordCount="7" value="F">
+              <Extension extender="spss.com" name="probability" value="0.25"/>
+</ScoreDistribution>
+            <ScoreDistribution confidence="0.75" probability="0.75" recordCount="21" value="T">
+              <Extension extender="spss.com" name="probability" value="0.75"/>
+</ScoreDistribution>
+</Node>
+</Node>
+        <Node defaultChild="31" id="9" recordCount="130" score="T">
+          <Extension>
+            <X-Node>
+              <X-NodeStats adjPValue="1.38840130227217e-12" chiSquare="50.2001085907336" df1="1"/>
+</X-Node>
+</Extension>
+          <CompoundPredicate booleanOperator="surrogate">
+            <CompoundPredicate booleanOperator="and">
+              <SimplePredicate field="Est Income" operator="greaterThan" value="83891.9"/>
+              <True/>
+</CompoundPredicate>
+            <False/>
+</CompoundPredicate>
+          <ScoreDistribution confidence="0.430769230769231" probability="0.430769230769231" recordCount="56" value="F">
+            <Extension extender="spss.com" name="probability" value="0.430769230769231"/>
+</ScoreDistribution>
+          <ScoreDistribution confidence="0.569230769230769" probability="0.569230769230769" recordCount="74" value="T">
+            <Extension extender="spss.com" name="probability" value="0.569230769230769"/>
+</ScoreDistribution>
+          <Node defaultChild="52" id="30" recordCount="50" score="F">
+            <Extension>
+              <X-Node>
+                <X-NodeStats adjPValue="0.00198798192781221" chiSquare="12.8844114528102" df1="1"/>
+</X-Node>
+</Extension>
+            <CompoundPredicate booleanOperator="surrogate">
+              <CompoundPredicate booleanOperator="or">
+                <SimplePredicate field="Gender" operator="equal" value="F"/>
+                <False/>
+</CompoundPredicate>
+              <False/>
+</CompoundPredicate>
+            <ScoreDistribution confidence="0.82" probability="0.82" recordCount="41" value="F">
+              <Extension extender="spss.com" name="probability" value="0.82"/>
+</ScoreDistribution>
+            <ScoreDistribution confidence="0.18" probability="0.18" recordCount="9" value="T">
+              <Extension extender="spss.com" name="probability" value="0.18"/>
+</ScoreDistribution>
+            <Node id="51" recordCount="23" score="F">
+              <CompoundPredicate booleanOperator="surrogate">
+                <CompoundPredicate booleanOperator="and">
+                  <True/>
+                  <SimplePredicate field="Usage" operator="lessOrEqual" value="44.13"/>
+</CompoundPredicate>
+                <False/>
+</CompoundPredicate>
+              <ScoreDistribution confidence="0.608695652173913" probability="0.608695652173913" recordCount="14" value="F">
+                <Extension extender="spss.com" name="probability" value="0.608695652173913"/>
+</ScoreDistribution>
+              <ScoreDistribution confidence="0.391304347826087" probability="0.391304347826087" recordCount="9" value="T">
+                <Extension extender="spss.com" name="probability" value="0.391304347826087"/>
+</ScoreDistribution>
+</Node>
+            <Node id="52" recordCount="27" score="F">
+              <CompoundPredicate booleanOperator="surrogate">
+                <CompoundPredicate booleanOperator="and">
+                  <SimplePredicate field="Usage" operator="greaterThan" value="44.13"/>
+                  <True/>
+</CompoundPredicate>
+                <True/>
+</CompoundPredicate>
+              <ScoreDistribution confidence="1" probability="1" recordCount="27" value="F">
+                <Extension extender="spss.com" name="probability" value="1"/>
+</ScoreDistribution>
+              <ScoreDistribution confidence="0" probability="0" recordCount="0" value="T">
+                <Extension extender="spss.com" name="probability" value="0"/>
+</ScoreDistribution>
+</Node>
+</Node>
+          <Node defaultChild="54" id="31" recordCount="80" score="T">
+            <Extension>
+              <X-Node>
+                <X-NodeStats adjPValue="2.11861188629161e-11" chiSquare="48.6713286713287" df1="1"/>
+</X-Node>
+</Extension>
+            <CompoundPredicate booleanOperator="surrogate">
+              <CompoundPredicate booleanOperator="or">
+                <SimplePredicate field="Gender" operator="equal" value="M"/>
+                <False/>
+</CompoundPredicate>
+              <True/>
+</CompoundPredicate>
+            <ScoreDistribution confidence="0.1875" probability="0.1875" recordCount="15" value="F">
+              <Extension extender="spss.com" name="probability" value="0.1875"/>
+</ScoreDistribution>
+            <ScoreDistribution confidence="0.8125" probability="0.8125" recordCount="65" value="T">
+              <Extension extender="spss.com" name="probability" value="0.8125"/>
+</ScoreDistribution>
+            <Node id="53" recordCount="22" score="F">
+              <CompoundPredicate booleanOperator="surrogate">
+                <CompoundPredicate booleanOperator="and">
+                  <True/>
+                  <SimplePredicate field="Age" operator="lessOrEqual" value="41.913333"/>
+</CompoundPredicate>
+                <False/>
+</CompoundPredicate>
+              <ScoreDistribution confidence="0.681818181818182" probability="0.681818181818182" recordCount="15" value="F">
+                <Extension extender="spss.com" name="probability" value="0.681818181818182"/>
+</ScoreDistribution>
+              <ScoreDistribution confidence="0.318181818181818" probability="0.318181818181818" recordCount="7" value="T">
+                <Extension extender="spss.com" name="probability" value="0.318181818181818"/>
+</ScoreDistribution>
+</Node>
+            <Node id="54" recordCount="58" score="T">
+              <CompoundPredicate booleanOperator="surrogate">
+                <CompoundPredicate booleanOperator="and">
+                  <SimplePredicate field="Age" operator="greaterThan" value="41.913333"/>
+                  <True/>
+</CompoundPredicate>
+                <True/>
+</CompoundPredicate>
+              <ScoreDistribution confidence="0" probability="0" recordCount="0" value="F">
+                <Extension extender="spss.com" name="probability" value="0"/>
+</ScoreDistribution>
+              <ScoreDistribution confidence="1" probability="1" recordCount="58" value="T">
+                <Extension extender="spss.com" name="probability" value="1"/>
+</ScoreDistribution>
+</Node>
+</Node>
+</Node>
+</Node>
+</Node>
+    <Extension>
+      <X-TreeModel>
+        <X-Priors>
+          <X-Prior-Value targetCategory="F" value="0.594528875379939"/>
+          <X-Prior-Value targetCategory="T" value="0.405471124620061"/>
+</X-Priors>
+</X-TreeModel>
+</Extension>
+</TreeModel>
+</PMML>

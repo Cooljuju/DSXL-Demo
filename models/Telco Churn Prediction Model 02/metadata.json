@@ -1,0 +1,111 @@
+{
+    "algorithm": "PipelineModel", 
+    "algorithmType": "Classification", 
+    "author": "999", 
+    "createdAt": 1534299548373, 
+    "features": [
+        {
+            "name": "Status", 
+            "sample": "M", 
+            "type": "unicode"
+        }, 
+        {
+            "name": "CHURN", 
+            "sample": "F", 
+            "type": "unicode"
+        }, 
+        {
+            "name": "Paymethod", 
+            "sample": "CH", 
+            "type": "unicode"
+        }, 
+        {
+            "name": "Gender", 
+            "sample": "M", 
+            "type": "unicode"
+        }, 
+        {
+            "name": "Age", 
+            "sample": 49.426667, 
+            "type": "float"
+        }, 
+        {
+            "name": "RatePlan", 
+            "sample": 2.0, 
+            "type": "float"
+        }, 
+        {
+            "name": "Car Owner", 
+            "sample": "N", 
+            "type": "unicode"
+        }, 
+        {
+            "name": "Children", 
+            "sample": 2.0, 
+            "type": "float"
+        }, 
+        {
+            "name": "Usage", 
+            "sample": 75.29, 
+            "type": "float"
+        }, 
+        {
+            "name": "LongDistance", 
+            "sample": 29.78, 
+            "type": "float"
+        }, 
+        {
+            "name": "Dropped", 
+            "sample": 0.0, 
+            "type": "float"
+        }, 
+        {
+            "name": "LongDistanceBilltype", 
+            "sample": "Standard", 
+            "type": "unicode"
+        }, 
+        {
+            "name": "International", 
+            "sample": 0.0, 
+            "type": "float"
+        }, 
+        {
+            "name": "Est Income", 
+            "sample": 29616.0, 
+            "type": "float"
+        }, 
+        {
+            "name": "Local", 
+            "sample": 45.5, 
+            "type": "float"
+        }, 
+        {
+            "name": "ID", 
+            "sample": 6, 
+            "type": "int"
+        }, 
+        {
+            "name": "LocalBilltype", 
+            "sample": "FreeLocal", 
+            "type": "unicode"
+        }
+    ], 
+    "id": 1534299548373, 
+    "isPublished": false, 
+    "labelColumns": [
+        {
+            "name": "CHURN", 
+            "type": "string"
+        }
+    ], 
+    "latestModelVersion": 1, 
+    "learningType": "Supervised", 
+    "name": "Telco Churn Prediction Model 02", 
+    "params": {}, 
+    "publishedBy": "", 
+    "publishedModelVersion": -1, 
+    "runtime": "Python27", 
+    "serialization": "spark", 
+    "source": "", 
+    "type": "spark-2.0"
+}

@@ -1,0 +1,78 @@
+{
+    "id": 1534303241903,
+    "name": "Customer_churn_CHAID_Modeler",
+    "latestModelVersion": 1,
+    "runtime": "pmml-3.0",
+    "author": "999",
+    "createdAt": 1534303241903,
+    "filename": "import",
+    "features": [
+        {
+            "name": "Car Owner",
+            "type": "string"
+        },
+        {
+            "name": "LongDistance",
+            "type": "double"
+        },
+        {
+            "name": "Est Income",
+            "type": "double"
+        },
+        {
+            "name": "International",
+            "type": "double"
+        },
+        {
+            "name": "LocalBilltype",
+            "type": "string"
+        },
+        {
+            "name": "Children",
+            "type": "double"
+        },
+        {
+            "name": "Status",
+            "type": "string"
+        },
+        {
+            "name": "Usage",
+            "type": "double"
+        },
+        {
+            "name": "Age",
+            "type": "double"
+        },
+        {
+            "name": "Paymethod",
+            "type": "string"
+        },
+        {
+            "name": "RatePlan",
+            "type": "double"
+        },
+        {
+            "name": "Gender",
+            "type": "string"
+        },
+        {
+            "name": "LongDistanceBilltype",
+            "type": "string"
+        }
+    ],
+    "labelColumns": [
+        {
+            "name": "CHURN",
+            "type": "string"
+        }
+    ],
+    "type": "pmml-model-3.0",
+    "serialization": "pmml",
+    "learningType": "Supervised",
+    "algorithm": "TreeModel",
+    "algorithmType": "Classification",
+    "params": {},
+    "publishedBy": "",
+    "isPublished": false,
+    "publishedModelVersion": -1
+}

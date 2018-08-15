@@ -1,0 +1,65 @@
+[
+  {
+    "args": [],
+    "author": "999",
+    "dateCreated": 1534300706,
+    "displayName": "Telco Churn Prediction Model 02-1534300670518",
+    "env": [
+      "SPARK_VERSION=2.0"
+    ],
+    "fileName": "Telco Churn Prediction Model 02-model-evaluation-1534300670518.py",
+    "jobId": "8fb20d05d66e0b47",
+    "jobName": "telco-churn-prediction-model-02-1534300670518",
+    "mainScript": [
+      "/opt/conda/bin/python",
+      "scripts/Telco Churn Prediction Model 02-model-evaluation-1534300670518.py"
+    ],
+    "remoteOptions": [],
+    "runtimeEnvironment": "dsx-scripted-ml-python2",
+    "scheduleDescription": "On demand",
+    "targetHost": "",
+    "type": "Model evaluation"
+  },
+  {
+    "args": [],
+    "author": "999",
+    "dateCreated": 1534301035,
+    "displayName": "Telco Churn Prediction Model 02-1534301025315",
+    "env": [
+      "SPARK_VERSION=2.0"
+    ],
+    "fileName": "Telco Churn Prediction Model 02-model-evaluation-1534301025315.py",
+    "jobId": "297cc1afcc04cb8f",
+    "jobName": "telco-churn-prediction-model-02-1534301025315",
+    "mainScript": [
+      "/opt/conda/bin/python",
+      "scripts/Telco Churn Prediction Model 02-model-evaluation-1534301025315.py"
+    ],
+    "remoteOptions": [],
+    "runtimeEnvironment": "dsx-scripted-ml-python2",
+    "scheduleDescription": "On demand",
+    "targetHost": "",
+    "type": "Model evaluation"
+  },
+  {
+    "args": [],
+    "author": "999",
+    "dateCreated": 1534301268,
+    "displayName": "Telco Churn Prediction Model 02-1534301211762",
+    "env": [
+      "SPARK_VERSION=2.0"
+    ],
+    "fileName": "Telco Churn Prediction Model 02-batch-scoring-1534301211762.py",
+    "jobId": "8095a608ee4e442d",
+    "jobName": "telco-churn-prediction-model-02-1534301211762",
+    "mainScript": [
+      "/opt/conda/bin/python",
+      "scripts/Telco Churn Prediction Model 02-batch-scoring-1534301211762.py"
+    ],
+    "remoteOptions": [],
+    "runtimeEnvironment": "dsx-scripted-ml-python2",
+    "scheduleDescription": "On demand",
+    "targetHost": "",
+    "type": "Batch scoring"
+  }
+]

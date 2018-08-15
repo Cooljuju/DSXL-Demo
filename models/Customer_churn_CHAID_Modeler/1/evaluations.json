@@ -1,0 +1,18 @@
+[
+    {
+        "metrics": {
+            "accuracyScore": 0.8727008712487899,
+            "areaUnderPR": 0.8754915961098703,
+            "areaUnderROC": 0.8680526098667767,
+            "threshold": {
+                "metric": "accuracyScore",
+                "mid_value": 0.7,
+                "min_value": 0.3
+            }
+        },
+        "modelName": "Customer_churn_CHAID_Modeler",
+        "modelVersion": "1",
+        "performance": "good",
+        "startTime": 1534303387
+    }
+]
