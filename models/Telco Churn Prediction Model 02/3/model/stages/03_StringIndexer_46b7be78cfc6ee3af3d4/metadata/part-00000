@@ -1,0 +1,1 @@
+{"class":"org.apache.spark.ml.feature.StringIndexerModel","timestamp":1534304452122,"sparkVersion":"2.0.2","uid":"StringIndexer_46b7be78cfc6ee3af3d4","paramMap":{"inputCol":"Car Owner","outputCol":"IXCarOwner","handleInvalid":"error"}}

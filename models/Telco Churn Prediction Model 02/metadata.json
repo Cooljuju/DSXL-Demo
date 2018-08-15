@@ -98,7 +98,7 @@
             "type": "string"
         }
     ], 
-    "latestModelVersion": 1, 
+    "latestModelVersion": 4, 
     "learningType": "Supervised", 
     "name": "Telco Churn Prediction Model 02", 
     "params": {}, 

@@ -1,0 +1,9 @@
+{
+    "description": "", 
+    "modelVersion": 4, 
+    "modifiedAt": 1534304505386, 
+    "modifiedBy": "999", 
+    "performanceMetrics": {
+        "accuracy": 0.8857142857142857
+    }
+}
